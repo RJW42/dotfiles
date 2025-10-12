@@ -1,4 +1,4 @@
-pacman -S 1password firefox neovim base-devel lua man-db man-pages discord
+pacman -S 1password firefox neovim base-devel lua man-db man-pages discord unzip
 
 ## Man
 # https://unix.stackexchange.com/questions/663575/how-can-i-make-sure-that-man-has-pages-installed
@@ -40,4 +40,5 @@ mkdir -p documents/projects downloads pictures/required
 git clone git@github.com:RJW42/tts.git $HOME/documents/projects/tts
 git clone git@github.com:RJW42/brick.git $HOME/documents/projects/brick
 
-
+## Steam
+https://wiki.archlinux.org/title/Steam
