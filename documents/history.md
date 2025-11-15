@@ -35,6 +35,10 @@ yay -S waybar
 sudo pacman -S polkit-kde-agent
 sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji otf-font-awesome
 
+# https://github.com/P-ti-bob/hyprland/blob/main/docs/theming.md
+pacman -S qt5ct qt6ct kvantum 
+pacman -S nwg-look
+
 ## Projects 
 rustup default stable
 
