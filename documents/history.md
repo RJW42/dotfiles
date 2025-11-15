@@ -32,6 +32,8 @@ yay -S hyprpaper
 yay -Ss waybar
 yay -S waybar
 
+sudo pacman -S polkit-kde-agent
+
 ## Projects 
 rustup default stable
 
@@ -42,3 +44,6 @@ git clone git@github.com:RJW42/brick.git $HOME/documents/projects/brick
 
 ## Steam
 https://wiki.archlinux.org/title/Steam
+
+## Dunst
+sudo pacman -S dunst
