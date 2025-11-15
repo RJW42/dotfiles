@@ -33,6 +33,7 @@ yay -Ss waybar
 yay -S waybar
 
 sudo pacman -S polkit-kde-agent
+sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji otf-font-awesome
 
 ## Projects 
 rustup default stable
