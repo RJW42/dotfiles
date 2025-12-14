@@ -3,3 +3,5 @@
 	email = robbiejohnwallace@yahoo.co.uk
 [push]
 	autoSetupRemote = true
+[init]
+	defaultBranch = master
