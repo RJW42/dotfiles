@@ -79,7 +79,7 @@ mount "${part_boot}" /mnt/boot
 
 ### Install and configure the basic system ###
 cat >>/etc/pacman.conf <<EOF
-[mdaffin]
+[rjw-arch-1]
 SigLevel = Optional TrustAll
 Server = $REPO_URL
 EOF
@@ -89,7 +89,7 @@ genfstab -t PARTUUID /mnt >> /mnt/etc/fstab
 echo "${hostname}" > /mnt/etc/hostname
 
 cat >>/mnt/etc/pacman.conf <<EOF
-[mdaffin]
+[rjw-arch-1]
 SigLevel = Optional TrustAll
 Server = $REPO_URL
 EOF
