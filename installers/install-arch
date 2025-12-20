@@ -34,7 +34,7 @@ clear
 rpassword=$(dialog --stdout --passwordbox "Enter root password" 0 0) || exit 1
 clear
 : ${rpassword:?"password cannot be empty"}
-rpassword=$(dialog --stdout --passwordbox "Enter root password again" 0 0) || exit 1
+rpassword2=$(dialog --stdout --passwordbox "Enter root password again" 0 0) || exit 1
 clear
 [[ "$rpassword" == "$rpassword2" ]] || ( echo "Passwords did not match"; exit 1; )
 
