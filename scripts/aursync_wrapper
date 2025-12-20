@@ -6,6 +6,7 @@ trap 's=$?; echo "$0: Error on line "$LINENO": $BASH_COMMAND"; exit $s' ERR
 REMOTE_PATH=s3://rjw-arch-1/repo/x86_64
 LOCAL_PATH=$HOME/.local/share/arch-repo
 REPO_NAME=rjw-arch-1
+CHROOT="$HOME/.local/share/arch-root"
 
 mkdir -p "$LOCAL_PATH"
 
@@ -16,13 +17,11 @@ ln -sf "$REPO_NAME.files.tar.xz" "$LOCAL_PATH/$REPO_NAME.files"
 
 ## Clean up older packages that may or may not have been deleted from the
 ## remote so that we do not reupload them
-rm -f "$LOCAL_PATH/"*.pkg.tar.zst
+rm -f "$LOCAL_PATH/"*.pkg.tar.xz
 
-aur sync --repo "$REPO_NAME" --root "$LOCAL_PATH" "$@" || true
+aur sync --database "$REPO_NAME" --root "$LOCAL_PATH" --chroot --directory "$CHROOT" "$@" || true
 
 ## Sync local DB to remote ##
 s3cmd sync --follow-symlinks \
-    "$LOCAL_PATH/"*.pkg.tar.zst \
-    "$LOCAL_PATH/$REPO_NAME".{db,files}{,.tar.xz} \
+    "$LOCAL_PATH/" \
     "$REMOTE_PATH/"
-
