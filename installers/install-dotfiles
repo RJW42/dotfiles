@@ -8,6 +8,7 @@ trap 's=$?; echo "$0: Error on line "$LINENO": $BASH_COMMAND"; exit $s' ERR
 cd $HOME
 mkdir .dotfiles
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME init -b master
+git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config --local status.showUntrackedFiles no
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME remote add origin git@github.com:RJW42/dotfiles.git
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME fetch
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME reset --hard origin/master
@@ -15,5 +16,6 @@ git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME reset --hard origin/master
 cd .config/nvim
 git init -b master
 git remote add origin git@github.com:RJW42/nvim.git
-git reset --hard origin master
+git remote fetch 
+git reset --hard origin/master
 cd $HOME
