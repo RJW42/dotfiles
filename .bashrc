@@ -11,3 +11,4 @@ PS1='[\u@\h \W]\$ '
 alias df_config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 export PATH=~/scripts:$PATH
+. "$HOME/.cargo/env"
