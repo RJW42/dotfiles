@@ -1,0 +1,8 @@
+#!/bin/bash
+# WARNING: work in progress
+set -uo pipefail
+trap 's=$?; echo "$0: Error on line "$LINENO": $BASH_COMMAND"; exit $s' ERR
+
+mkdir -p ~/pictures
+cd ~/pictures
+wget https://b.l3n.co/uyoOFq.webp -O wallpaper

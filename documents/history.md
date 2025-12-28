@@ -27,10 +27,7 @@ systemctl --user enable --now pipewire pipewire-pulse wireplumber
 
 
 ## Hyperland
-sudo pacman -S hyprlock
-yay -S hyprpaper
-yay -Ss waybar
-yay -S waybar
+sudo pacman -S hyprlock hyprpaper waybar brightnessctl
 
 sudo pacman -S polkit-kde-agent
 sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji otf-font-awesome
@@ -38,6 +35,9 @@ sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji otf-font-awesome
 # https://github.com/P-ti-bob/hyprland/blob/main/docs/theming.md
 pacman -S qt5ct qt6ct kvantum 
 pacman -S nwg-look
+
+# https://wiki.archlinux.org/title/Uniform_look_for_Qt_and_GTK_applications
+pacman -S breeze
 
 ## Projects 
 rustup default stable
@@ -52,3 +52,6 @@ https://wiki.archlinux.org/title/Steam
 
 ## Dunst
 sudo pacman -S dunst
+
+## FreeCad
+sudo pacaman -S freecad
