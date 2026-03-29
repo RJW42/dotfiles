@@ -55,3 +55,9 @@ sudo pacman -S dunst
 
 ## FreeCad
 sudo pacaman -S freecad
+
+## Blender
+sudo pacman -S blender
+
+# SDR
+sudo pacman -S docker cmake libusb
